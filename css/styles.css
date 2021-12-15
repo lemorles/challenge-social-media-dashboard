@@ -38,6 +38,26 @@
   --text-secondary-dark: hsl(228, 34%, 66%);
 }
 
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ .color-wrapper .toggle::before {
+  transform: translateX(0);
+}
+
+#checkbox:checked ~ .color-wrapper {
+  --toogle: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+  --bg-primary: hsl(230, 17%, 14%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%);
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -52,8 +72,6 @@ html {
 body {
   font-size: 14rem;
   font-family: "Inter", sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
 }
 
 ul,
@@ -77,9 +95,15 @@ p {
   padding: 0;
 }
 
+.color-wrapper {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
 .wrapper {
   max-width: 1350px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -98,6 +122,41 @@ p {
   color: var(--text-secondary);
 }
 
+.header-followers {
+  border-bottom: 1px solid var(--text-secondary);
+  padding-bottom: 20px;
+}
+
+.dark-mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.toggle {
+  display: block;
+  padding: 3px;
+  height: 26px;
+  width: 60px;
+  border-radius: 50px;
+  background: var(--toogle);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: var(--bg-primary);
+  border-radius: 50%;
+  transform: translateX(34px);
+  transition: 0.3s;
+  will-change: transform;
+}
+
 .grid {
   display: grid;
   row-gap: 25px;
@@ -105,8 +164,12 @@ p {
 }
 
 /* Section */
-.counters {
-  margin: 0 25px;
+.section {
+  padding: 0 25px;
+}
+
+#overview {
+  padding-bottom: 25px;
 }
 
 /* Card */
@@ -173,8 +236,8 @@ p {
 }
 
 /* Overview */
-section h2 {
-  margin: 50px 0 25px;
+.overview {
+  padding: 40px 25px 20px;
 }
 
 .card-grid {
@@ -240,27 +303,7 @@ section h2 {
 @media screen and (min-width: 1200px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background: var(--bg-primary-dark);
-    color: var(--text-primary-dark);
-  }
-
-  .card {
-    background: var(--card-bg-dark);
-  }
-
-  .header p,
-  .card-social,
-  .card-followers,
-  .card-overview--title {
-    color: var(--text-secondary-dark);
-  }
-
-  .card {
-    background: var(--card-bg-dark);
+    max-width: 1350px;
+    margin: auto;
   }
 }

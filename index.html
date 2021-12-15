@@ -19,15 +19,21 @@
     <title>Frontend Mentor | [Challenge Name Here]</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
+    <input type="checkbox" id="checkbox" />
+    <div class="color-wrapper">
+      <!-- header -->
+      <header class="header wrapper">
         <h1>Social Media Dashboard</h1>
-        <p>Total Followers: 23,004</p>
+        <p class="header-followers">Total Followers: 23,004</p>
         <!-- Dark Mode -->
+        <p class="dark-mode">
+          Dark Mode
+          <label class="toggle" for="checkbox"></label>
+        </p>
       </header>
 
       <!-- section counters -->
-      <section class="counters grid">
+      <section class="section grid">
         <article class="card facebook">
           <p class="card-social">
             <img src="./images/icon-facebook.svg" alt="" />@nathanf
@@ -74,97 +80,97 @@
       </section>
 
       <!-- section overview -->
-      <section class="overview counters">
+      <div class="overview wrapper">
         <h2>Overview - Today</h2>
-        <div class="grid">
-          <article class="card card-grid">
-            <p class="card-overview--title">Page Views</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-facebook.svg" alt="" />
-            </p>
-            <p class="card-overview--number">87</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-up.svg" alt="" />3%
-            </p>
-          </article>
+      </div>
+      <section class="section grid" id="overview">
+        <article class="card card-grid">
+          <p class="card-overview--title">Page Views</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-facebook.svg" alt="" />
+          </p>
+          <p class="card-overview--number">87</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-up.svg" alt="" />3%
+          </p>
+        </article>
 
-          <article class="card card-grid">
-            <p class="card-overview--title">Likes</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-facebook.svg" alt="" />
-            </p>
-            <p class="card-overview--number">52</p>
-            <p class="card-overview--percent down">
-              <img src="./images/icon-down.svg" alt="" />2%
-            </p>
-          </article>
+        <article class="card card-grid">
+          <p class="card-overview--title">Likes</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-facebook.svg" alt="" />
+          </p>
+          <p class="card-overview--number">52</p>
+          <p class="card-overview--percent down">
+            <img src="./images/icon-down.svg" alt="" />2%
+          </p>
+        </article>
 
-          <article class="card card-grid">
-            <p class="card-overview--title">Likes</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-instagram.svg" alt="" />
-            </p>
-            <p class="card-overview--number">5462</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-up.svg" alt="" />2257%
-            </p>
-          </article>
+        <article class="card card-grid">
+          <p class="card-overview--title">Likes</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-instagram.svg" alt="" />
+          </p>
+          <p class="card-overview--number">5462</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-up.svg" alt="" />2257%
+          </p>
+        </article>
 
-          <article class="card card-grid">
-            <p class="card-overview--title">Profile Views</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-instagram.svg" alt="" />
-            </p>
-            <p class="card-overview--number">52k</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-up.svg" alt="" />1375%
-            </p>
-          </article>
+        <article class="card card-grid">
+          <p class="card-overview--title">Profile Views</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-instagram.svg" alt="" />
+          </p>
+          <p class="card-overview--number">52k</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-up.svg" alt="" />1375%
+          </p>
+        </article>
 
-          <article class="card card-grid">
-            <p class="card-overview--title">Retweets</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-twitter.svg" alt="" />
-            </p>
-            <p class="card-overview--number">117</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-up.svg" alt="" />303%
-            </p>
-          </article>
+        <article class="card card-grid">
+          <p class="card-overview--title">Retweets</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-twitter.svg" alt="" />
+          </p>
+          <p class="card-overview--number">117</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-up.svg" alt="" />303%
+          </p>
+        </article>
 
-          <article class="card card-grid">
-            <p class="card-overview--title">Likes</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-facebook.svg" alt="" />
-            </p>
-            <p class="card-overview--number">507</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-up.svg" alt="" />553%
-            </p>
-          </article>
+        <article class="card card-grid">
+          <p class="card-overview--title">Likes</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-facebook.svg" alt="" />
+          </p>
+          <p class="card-overview--number">507</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-up.svg" alt="" />553%
+          </p>
+        </article>
 
-          <article class="card card-grid">
-            <p class="card-overview--title">Likes</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-youtube.svg" alt="" />
-            </p>
-            <p class="card-overview--number">107</p>
-            <p class="card-overview--percent down">
-              <img src="./images/icon-down.svg" alt="" />19%
-            </p>
-          </article>
+        <article class="card card-grid">
+          <p class="card-overview--title">Likes</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-youtube.svg" alt="" />
+          </p>
+          <p class="card-overview--number">107</p>
+          <p class="card-overview--percent down">
+            <img src="./images/icon-down.svg" alt="" />19%
+          </p>
+        </article>
 
-          <article class="card card-grid">
-            <p class="card-overview--title">Total Views</p>
-            <p class="card-overview--percent">
-              <img src="./images/icon-youtube.svg" alt="" />
-            </p>
-            <p class="card-overview--number">1407</p>
-            <p class="card-overview--percent down">
-              <img src="./images/icon-down.svg" alt="" />12%
-            </p>
-          </article>
-        </div>
+        <article class="card card-grid">
+          <p class="card-overview--title">Total Views</p>
+          <p class="card-overview--percent">
+            <img src="./images/icon-youtube.svg" alt="" />
+          </p>
+          <p class="card-overview--number">1407</p>
+          <p class="card-overview--percent down">
+            <img src="./images/icon-down.svg" alt="" />12%
+          </p>
+        </article>
       </section>
     </div>
   </body>
